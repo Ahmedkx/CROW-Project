@@ -1,6 +1,6 @@
 export default function NavLinks() {
     return (
-        <div className="links">
+        <div className="links" dir="rtl">
             <ul className="flex-wrap justify-around hidden gap-6 text-5xl sm:flex ">
                 <li className="relative group text-primary">
                     الرئيسيه

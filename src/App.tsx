@@ -1,20 +1,18 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Route, Routes } from "react-router";
 import "./App.css";
+import Home from "./components/Pages/Home";
+import OurWork from "./components/Pages/OurWork";
 
 function App() {
-    const [count, setCount] = useState(0);
-
     return (
         <>
             <div className="background-image fixed-bg"></div>
-            <div>
-                <h1 className="text-3xl font-bold underline">Hello world!</h1>
-                <p className="logo">
-                    CR<span>O</span>W
-                </p>
-            </div>
+            <main>
+                <Routes>
+                    <Route index element={<Home />} />
+                    <Route path="our-work" element={<OurWork />} />
+                </Routes>
+            </main>
         </>
     );
 }
