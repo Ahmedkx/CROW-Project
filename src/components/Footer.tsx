@@ -1,8 +1,6 @@
-import React from "react";
-
 export default function Footer() {
     return (
-        <footer>
+        <footer className="mt-20">
             <div className="h-px bg-primary"></div>
             <p className="mt-5 text-center">
                 "
@@ -17,14 +15,14 @@ export default function Footer() {
                 " إلى الجمع بين الإبداع والتكنولوجيا لتحقيق نتائج مميزة
                 لعملائنا.
             </p>
-            <p className="text-center">
+            <div className="text-center">
                 رؤية المشروع:
                 <p>
                     تتمثل رؤيتنا في أن نصبح الشركة الرائدة في مجال التسويق
                     الرقمي في المنطقة، من خلال تقديم استراتيجيات مبتكرة وبناء
                     علاقات قوية مع عملائنا
                 </p>
-            </p>
+            </div>
         </footer>
     );
 }

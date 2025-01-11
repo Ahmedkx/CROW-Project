@@ -1,7 +1,7 @@
-export default function NavLinks() {
+export default function NavLinks({ style = "text-5xl" }) {
     return (
-        <div className="links" dir="rtl">
-            <ul className="flex-wrap justify-around hidden gap-6 text-5xl sm:flex ">
+        <div className={`links ${style}`} dir="rtl">
+            <ul className={`flex-wrap justify-around hidden gap-6 sm:flex `}>
                 <li className="relative group text-primary">
                     الرئيسيه
                     <span className="absolute right-0 w-0 h-1 transition-all duration-300 -bottom-2 bg-primary group-hover:w-full"></span>
