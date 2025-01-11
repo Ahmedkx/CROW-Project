@@ -1,4 +1,3 @@
-// filepath: src/Card.tsx
 import React from "react";
 
 interface CardProps {
@@ -9,12 +8,12 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ image, heading, body }) => {
     return (
-        <div>
-            <figure className="w-80 h-80">
+        <div className="m-auto">
+            <figure className="w-80">
                 <img src={image} alt="image" className="w-full" />
             </figure>
-            <p className="text-primary">{heading}</p>
-            <p className="w-80">{body}</p>
+            <p className="text-xl text-primary">{heading}</p>
+            <p className="text-sm w-80">{body}</p>
         </div>
     );
 };
