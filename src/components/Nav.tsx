@@ -12,7 +12,11 @@ export default function Nav() {
         >
             <NavLink to="/">
                 <figure className="w-20 h-20 ml-5 lg:ml-0">
-                    <img src={logo} alt="logo" className="w-full min-w-full" />
+                    <img
+                        src={logo}
+                        alt="Crow logo"
+                        className="w-full min-w-full"
+                    />
                 </figure>
             </NavLink>
             <div className="grow">

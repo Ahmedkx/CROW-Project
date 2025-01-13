@@ -16,9 +16,13 @@ const Card: React.FC<CardProps> = ({
     textStyle,
 }) => {
     return (
-        <div className="m-auto transform transition-transform hover:-translate-y-2">
+        <div className="m-auto transition-transform transform hover:-translate-y-2">
             <figure className="w-80">
-                <img src={image} alt="image" className={`w-full ${imgStyle}`} />
+                <img
+                    src={image}
+                    alt={heading}
+                    className={`w-full ${imgStyle}`}
+                />
             </figure>
             <p className={`text-xl text-primary ${textStyle}`}>{heading}</p>
             {body ? <p className="text-sm w-80">{body}</p> : null}

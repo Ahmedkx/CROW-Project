@@ -8,7 +8,9 @@ export default function NavLinks({ style = "text-5xl" }) {
                     <NavLink
                         to="/"
                         className={({ isActive }) =>
-                            isActive ? "text-primary" : "text-black"
+                            isActive
+                                ? "text-primary text-shadow"
+                                : "text-black text-shadow"
                         }
                     >
                         الرئيسيه
@@ -19,7 +21,9 @@ export default function NavLinks({ style = "text-5xl" }) {
                     <NavLink
                         to="/our-work"
                         className={({ isActive }) =>
-                            isActive ? "text-primary" : "text-black"
+                            isActive
+                                ? "text-primary text-shadow"
+                                : "text-black text-shadow"
                         }
                     >
                         اعمالنا
@@ -30,7 +34,9 @@ export default function NavLinks({ style = "text-5xl" }) {
                     <NavLink
                         to="/our-partners"
                         className={({ isActive }) =>
-                            isActive ? "text-primary" : "text-black"
+                            isActive
+                                ? "text-primary text-shadow"
+                                : "text-black text-shadow"
                         }
                     >
                         شركاؤنا
@@ -41,7 +47,9 @@ export default function NavLinks({ style = "text-5xl" }) {
                     <NavLink
                         to="/our-services"
                         className={({ isActive }) =>
-                            isActive ? "text-primary" : "text-black"
+                            isActive
+                                ? "text-primary text-shadow"
+                                : "text-black text-shadow"
                         }
                     >
                         خدماتنا
@@ -52,7 +60,9 @@ export default function NavLinks({ style = "text-5xl" }) {
                     <NavLink
                         to="/about-us"
                         className={({ isActive }) =>
-                            isActive ? "text-primary" : "text-black"
+                            isActive
+                                ? "text-primary text-shadow"
+                                : "text-black text-shadow"
                         }
                     >
                         من نحن
