@@ -19,7 +19,7 @@ export default function SendRequest() {
         },
 
         validate: {
-            sendRequestServiceName: isNotEmpty("يجب اختيار اسم الخدمة"),
+            sendRequestServiceName: isNotEmpty("يجب اختيار نوع الخدمة"),
             sendRequestFullName: isNotEmpty("يجب ادخال الاسم"),
             sendRequestEmail: (value) =>
                 /^\S+@\S+$/.test(value) ? null : "يجب ادخال بريد الكترونى صالح",
