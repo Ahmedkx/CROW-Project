@@ -56,7 +56,7 @@ export default function PhotographyRequest() {
             <div className="container flex justify-center">
                 <form
                     onSubmit={form.onSubmit(handleSubmit)}
-                    className="inline-flex flex-col items-center w-full max-w-md gap-6"
+                    className="inline-flex flex-col items-center max-w-md gap-6"
                 >
                     <TextInput
                         withAsterisk
@@ -121,16 +121,18 @@ export default function PhotographyRequest() {
                         className="w-full"
                     />
                     <Textarea
-                        radius="md  "
+                        radius="md"
                         size="md"
                         label="ملاحظات"
                         placeholder="ملاحظات"
                         key={form.key("photographyRequestNotes")}
                         {...form.getInputProps("photographyRequestNotes")}
                         className="w-full"
+                        autosize
+                        minRows={3}
                     />
 
-                    <Group justify="center" mt="md" className="w-full">
+                    <Group justify="center" mt="md">
                         <Button
                             type="submit"
                             loading={loading}

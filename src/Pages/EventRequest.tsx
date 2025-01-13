@@ -99,6 +99,7 @@ export default function EventRequest() {
                     />
                     <NumberInput
                         hideControls
+                        allowDecimal={false}
                         withAsterisk
                         radius="xl"
                         size="md"
