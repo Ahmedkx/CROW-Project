@@ -1,6 +1,8 @@
 import NavLinks from "./NavLinks";
 import Button from "./Button";
 import logo from "../assets/logo.png";
+import SideBarIcon from "./SideBarIcon";
+import { NavLink } from "react-router";
 
 export default function Nav() {
     return (
@@ -8,9 +10,11 @@ export default function Nav() {
             className="container flex items-center justify-center w-full gap-5 mx-auto mt-4 "
             dir="ltr"
         >
-            <figure className="w-20 h-20 ml-5 lg:ml-0">
-                <img src={logo} alt="logo" className="w-full min-w-full" />
-            </figure>
+            <NavLink to="/">
+                <figure className="w-20 h-20 ml-5 lg:ml-0">
+                    <img src={logo} alt="logo" className="w-full min-w-full" />
+                </figure>
+            </NavLink>
             <div className="grow">
                 <NavLinks style="hidden lg:block text-xl" />
             </div>
@@ -18,26 +22,11 @@ export default function Nav() {
                 <Button type="secondary" to="/contact-us">
                     تواصل معنا
                 </Button>
-                <Button type="primary" to="/">
+                <Button type="primary" to="/our-services">
                     اطلب خدمة
                 </Button>
             </div>
-            <div className="mr-5 lg:mr-0 lg:hidden">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="size-6"
-                >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
-                    />
-                </svg>
-            </div>
+            <SideBarIcon />
         </nav>
     );
 }

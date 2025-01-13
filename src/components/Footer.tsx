@@ -7,10 +7,10 @@ export default function Footer() {
             <div className="container mx-auto">
                 <p className="mt-5 text-center">
                     "
-                    <LogoText />
+                    <LogoText style="text-xs"/>
                     " هو مشروع تسويق رقمي مبتكر يهدف إلى تقديم حلول تسويقية
                     متكاملة تلبي احتياجات الشركات بمختلف أحجامها. نسعى في "
-                    <LogoText />" إلى الجمع بين الإبداع والتكنولوجيا لتحقيق
+                    <LogoText style="text-xs"/>" إلى الجمع بين الإبداع والتكنولوجيا لتحقيق
                     نتائج مميزة لعملائنا.
                 </p>
                 <div className="text-center">

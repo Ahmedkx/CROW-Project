@@ -4,17 +4,22 @@ import Card from "../Card";
 import { services } from "../../data/servicesData";
 import { NavLink } from "react-router";
 
-export default function OurWork() {
+export default function OurServices() {
+    const getRoute = (id: string) => {
+        if (id === "fashion") return "/photography-request";
+        if (id === "coverage") return "/event-request";
+        return "/send-request";
+    };
+
     return (
         <>
             <Nav />
             <div className="container flex flex-wrap justify-center gap-5 mx-auto mt-20 md:flex-row md:gap-10">
                 {services.map((service) => (
-                    <NavLink key={service.id} to={`/our-work/${service.id}`}>
+                    <NavLink key={service.id} to={getRoute(service.id)}>
                         <Card
                             image={service.image}
                             heading={service.title}
-                            body={service.description}
                             textStyle="text-center"
                         />
                     </NavLink>

@@ -11,7 +11,7 @@ export default function HomeNav() {
                 <Button type="secondary" to="/contact-us">
                     تواصل معنا
                 </Button>
-                <Button type="primary" to="/">
+                <Button type="primary" to="/our-services">
                     اطلب خدمة
                 </Button>
             </div>
