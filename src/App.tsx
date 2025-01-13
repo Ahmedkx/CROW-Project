@@ -1,17 +1,17 @@
 import { Route, Routes } from "react-router";
 import "./App.css";
 import "@mantine/core/styles.css";
-import Home from "./components/Pages/Home";
-import OurWork from "./components/Pages/OurWork";
-import OurPartners from "./components/Pages/OurPartners";
-import AboutUs from "./components/Pages/AboutUs";
-import ContactUs from "./components/Pages/ContactUs";
-import SendRequest from "./components/Pages/SendRequest";
-import EventRequest from "./components/Pages/EventRequest";
-import PhotographyRequest from "./components/Pages/PhotographyRequest";
-import OurServices from "./components/Pages/OurServices";
-import ServicePage from "./components/Pages/ServicePage";
-import RequestSent from "./components/Pages/RequestSent";
+import Home from "./Pages/Home";
+import OurWork from "./Pages/OurWork";
+import OurPartners from "./Pages/OurPartners";
+import AboutUs from "./Pages/AboutUs";
+import ContactUs from "./Pages/ContactUs";
+import SendRequest from "./Pages/SendRequest";
+import EventRequest from "./Pages/EventRequest";
+import PhotographyRequest from "./Pages/PhotographyRequest";
+import OurServices from "./Pages/OurServices";
+import ServicePage from "./Pages/ServicePage";
+import RequestSent from "./Pages/RequestSent";
 
 function App() {
     return (

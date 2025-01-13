@@ -1,6 +1,6 @@
-import Nav from "../Nav";
-import Footer from "../Footer";
-import LogoText from "../LogoText";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+import LogoText from "../components/LogoText";
 
 export default function AboutUs() {
     return (

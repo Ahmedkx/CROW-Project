@@ -1,36 +1,34 @@
-import { TextInput, Group, NumberInput, Button } from "@mantine/core";
+import { TextInput, Group, Select, Button } from "@mantine/core";
 import { isNotEmpty, useForm } from "@mantine/form";
-import Footer from "../Footer";
-import Nav from "../Nav";
+import Footer from "../components/Footer";
+import Nav from "../components/Nav";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router";
 import { useState } from "react";
 
-export default function EventRequest() {
+export default function SendRequest() {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
 
     const form = useForm({
         initialValues: {
-            eventRequestFullName: "",
-            eventRequestPhoneNumber: "",
-            eventRequestDate: "",
-            eventRequestLocation: "",
-            eventRequestGuestCount: "",
+            sendRequestServiceName: "",
+            sendRequestFullName: "",
+            sendRequestEmail: "",
+            sendRequestPhoneNumber: "",
         },
 
         validate: {
-            eventRequestFullName: isNotEmpty("يجب إدخال الاسم كامل"),
-            eventRequestPhoneNumber: isNotEmpty("يجب إدخال رقم الهاتف"),
-            eventRequestDate: isNotEmpty("يجب إدخال تاريخ الحدث"),
-            eventRequestLocation: isNotEmpty("يجب إدخال موقع الحدث"),
-            eventRequestGuestCount: isNotEmpty("يجب إدخال عدد الضيوف المتوقع"),
+            sendRequestServiceName: isNotEmpty("يجب اختيار اسم الخدمة"),
+            sendRequestFullName: isNotEmpty("يجب ادخال الاسم"),
+            sendRequestEmail: (value) =>
+                /^\S+@\S+$/.test(value) ? null : "يجب ادخال بريد الكترونى صالح",
+            sendRequestPhoneNumber: isNotEmpty("يجب ادخال رقم الهاتف"),
         },
     });
 
     const handleSubmit = (values: typeof form.values) => {
         setLoading(true);
-
         emailjs
             .send(
                 "service_v8a1k3g",
@@ -47,22 +45,47 @@ export default function EventRequest() {
     return (
         <div>
             <Nav />
-            <h1 className="my-10 text-2xl font-bold text-center">
-                ارسال طلب تغطيات
-            </h1>
+            <h1 className="my-10 text-2xl font-bold text-center">ارسال طلب</h1>
             <div className="flex justify-center">
                 <form
                     onSubmit={form.onSubmit(handleSubmit)}
                     className="inline-flex flex-col items-center gap-8"
                 >
+                    <Select
+                        withAsterisk
+                        radius="xl"
+                        size="md"
+                        label="نوع الخدمة"
+                        placeholder="اختر نوع الخدمة"
+                        key={form.key("sendRequestServiceName")}
+                        {...form.getInputProps("sendRequestServiceName")}
+                        data={[
+                            "التغطيات",
+                            "تصوير المرئي",
+                            "التسوق الرقمي",
+                            "تصوير فوتوغرافي",
+                            "تصوير الأزياء",
+                        ]}
+                        className="w-full"
+                    />
                     <TextInput
                         withAsterisk
                         radius="xl"
                         size="md"
                         label="الاسم كامل"
                         placeholder="الاسم كامل"
-                        key={form.key("eventRequestFullName")}
-                        {...form.getInputProps("eventRequestFullName")}
+                        key={form.key("sendRequestFullName")}
+                        {...form.getInputProps("sendRequestFullName")}
+                        className="w-full"
+                    />
+                    <TextInput
+                        withAsterisk
+                        radius="xl"
+                        size="md"
+                        label="البريد الاكترونى"
+                        placeholder="البريد الاكترونى"
+                        key={form.key("sendRequestEmail")}
+                        {...form.getInputProps("sendRequestEmail")}
                         className="w-full"
                     />
                     <TextInput
@@ -71,43 +94,12 @@ export default function EventRequest() {
                         size="md"
                         label="رقم الهاتف"
                         placeholder="رقم الهاتف"
-                        key={form.key("eventRequestPhoneNumber")}
-                        {...form.getInputProps("eventRequestPhoneNumber")}
-                        className="w-full"
-                    />
-                    <TextInput
-                        withAsterisk
-                        radius="xl"
-                        size="md"
-                        label="تاريخ الحدث"
-                        placeholder="تاريخ الحدث"
-                        key={form.key("eventRequestDate")}
-                        {...form.getInputProps("eventRequestDate")}
-                        className="w-full"
-                    />
-                    <TextInput
-                        withAsterisk
-                        radius="xl"
-                        size="md"
-                        label="موقع الحدث"
-                        placeholder="موقع الحدث"
-                        key={form.key("eventRequestLocation")}
-                        {...form.getInputProps("eventRequestLocation")}
-                        className="w-full"
-                    />
-                    <NumberInput
-                        hideControls
-                        withAsterisk
-                        radius="xl"
-                        size="md"
-                        label="عدد الضيوف المتوقع"
-                        placeholder="عدد الضيوف المتوقع"
-                        key={form.key("eventRequestGuestCount")}
-                        {...form.getInputProps("eventRequestGuestCount")}
+                        key={form.key("sendRequestPhoneNumber")}
+                        {...form.getInputProps("sendRequestPhoneNumber")}
                         className="w-full"
                     />
 
-                    <Group justify="center" mt="md">
+                    <Group justify="center" mt="md" className="w-full">
                         <Button
                             type="submit"
                             loading={loading}

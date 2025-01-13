@@ -1,7 +1,7 @@
 import { useParams } from "react-router";
-import { services } from "../../data/servicesData";
-import Nav from "../Nav";
-import Footer from "../Footer";
+import { services } from "../data/servicesData";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 export default function ServicePage() {
     const { id } = useParams();

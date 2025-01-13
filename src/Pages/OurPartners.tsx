@@ -1,8 +1,8 @@
-import Footer from "../Footer";
-import Nav from "../Nav";
-import Card from "../Card";
-import partner1 from "../../assets/partner-1.png";
-import partner2 from "../../assets/partner-2.png";
+import Footer from "../components/Footer";
+import Nav from "../components/Nav";
+import Card from "../components/Card";
+import partner1 from "../assets/partner-1.png";
+import partner2 from "../assets/partner-2.png";
 
 export default function OurPartners() {
     return (

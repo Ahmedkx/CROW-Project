@@ -1,5 +1,5 @@
-import HomeNav from "../HomeNav";
-import NavLinks from "../NavLinks";
+import HomeNav from "../components/HomeNav";
+import NavLinks from "../components/NavLinks";
 
 export default function Home() {
     return (

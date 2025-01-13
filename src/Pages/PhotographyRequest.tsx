@@ -1,7 +1,7 @@
 import { TextInput, Group, Textarea, Button } from "@mantine/core";
 import { isNotEmpty, useForm } from "@mantine/form";
-import Footer from "../Footer";
-import Nav from "../Nav";
+import Footer from "../components/Footer";
+import Nav from "../components/Nav";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { useNavigate } from "react-router";

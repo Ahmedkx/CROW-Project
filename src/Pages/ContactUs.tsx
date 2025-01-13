@@ -1,6 +1,4 @@
-import React from "react";
-import Nav from "../Nav";
-import Footer from "../Footer";
+import Nav from "../components/Nav";
 
 export default function ContactUs() {
     return (

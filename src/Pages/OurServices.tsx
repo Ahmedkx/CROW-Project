@@ -1,7 +1,7 @@
-import Nav from "../Nav";
-import Footer from "../Footer";
-import Card from "../Card";
-import { services } from "../../data/servicesData";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+import Card from "../components/Card";
+import { services } from "../data/servicesData";
 import { NavLink } from "react-router";
 
 export default function OurServices() {
