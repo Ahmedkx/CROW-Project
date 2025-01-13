@@ -65,12 +65,14 @@ export default function EventRequest() {
                         {...form.getInputProps("eventRequestFullName")}
                         className="w-full"
                     />
-                    <TextInput
+                    <NumberInput
                         withAsterisk
                         radius="xl"
                         size="md"
                         label="رقم الهاتف"
                         placeholder="رقم الهاتف"
+                        allowDecimal={false}
+                        hideControls
                         key={form.key("eventRequestPhoneNumber")}
                         {...form.getInputProps("eventRequestPhoneNumber")}
                         className="w-full"

@@ -1,4 +1,4 @@
-import { TextInput, Group, Textarea, Button } from "@mantine/core";
+import { TextInput, Group, Textarea, Button, NumberInput } from "@mantine/core";
 import { isNotEmpty, useForm } from "@mantine/form";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
@@ -68,12 +68,14 @@ export default function PhotographyRequest() {
                         {...form.getInputProps("photographyRequestFullName")}
                         className="w-full"
                     />
-                    <TextInput
+                    <NumberInput
                         withAsterisk
                         radius="xl"
                         size="md"
                         label="الهاتف"
                         placeholder="الهاتف"
+                        allowDecimal={false}
+                        hideControls
                         key={form.key("photographyRequestPhoneNumber")}
                         {...form.getInputProps("photographyRequestPhoneNumber")}
                         className="w-full"

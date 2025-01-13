@@ -1,4 +1,4 @@
-import { TextInput, Group, Select, Button } from "@mantine/core";
+import { TextInput, Group, Select, Button, NumberInput } from "@mantine/core";
 import { isNotEmpty, useForm } from "@mantine/form";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
@@ -88,12 +88,14 @@ export default function SendRequest() {
                         {...form.getInputProps("sendRequestEmail")}
                         className="w-full"
                     />
-                    <TextInput
+                    <NumberInput
                         withAsterisk
                         radius="xl"
                         size="md"
                         label="رقم الهاتف"
                         placeholder="رقم الهاتف"
+                        allowDecimal={false}
+                        hideControls
                         key={form.key("sendRequestPhoneNumber")}
                         {...form.getInputProps("sendRequestPhoneNumber")}
                         className="w-full"
