@@ -50,7 +50,7 @@ export default function EventRequest() {
             <h1 className="my-10 text-2xl font-bold text-center">
                 ارسال طلب تغطيات
             </h1>
-            <div className="flex justify-center">
+            <div className="container flex justify-center">
                 <form
                     onSubmit={form.onSubmit(handleSubmit)}
                     className="inline-flex flex-col items-center gap-8"

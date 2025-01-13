@@ -15,7 +15,7 @@ export default function ServicePage() {
         <>
             <Nav />
             <div className="container p-4 mx-auto mt-10">
-                <div className="flex flex-col md:flex-row-reverse">
+                <div className="flex flex-col gap-5 md:flex-row-reverse">
                     <img
                         src={service.image}
                         alt={service.title}

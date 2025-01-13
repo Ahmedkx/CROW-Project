@@ -46,10 +46,10 @@ export default function SendRequest() {
         <div>
             <Nav />
             <h1 className="my-10 text-2xl font-bold text-center">ارسال طلب</h1>
-            <div className="flex justify-center">
+            <div className="container flex justify-center">
                 <form
                     onSubmit={form.onSubmit(handleSubmit)}
-                    className="inline-flex flex-col items-center gap-8"
+                    className="inline-flex flex-col items-center gap-8 "
                 >
                     <Select
                         withAsterisk
