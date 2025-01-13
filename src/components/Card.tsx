@@ -8,13 +8,7 @@ interface CardProps {
     textStyle?: string;
 }
 
-const Card: React.FC<CardProps> = ({
-    image,
-    heading,
-    body,
-    imgStyle,
-    textStyle,
-}) => {
+const Card: React.FC<CardProps> = ({ image, heading, body, textStyle }) => {
     return (
         <div className="m-auto transition-transform transform hover:-translate-y-2">
             <figure className="w-80">
