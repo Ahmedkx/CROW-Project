@@ -8,7 +8,7 @@ export default function OurPartners() {
     return (
         <>
             <Nav />
-            <div className="container flex flex-col justify-center mx-auto mt-20 md:flex-row md:gap-52">
+            <div className="container flex flex-col justify-center mx-auto mt-20 md:flex-row md:gap-20">
                 <Card
                     image={partner1}
                     heading={"شركة تملك العمران"}

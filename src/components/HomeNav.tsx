@@ -8,8 +8,12 @@ export default function HomeNav() {
                 CR<span>O</span>W
             </p>
             <div className="flex items-center justify-center gap-12 md:mr-10 md:flex-row-reverse">
-                <Button type="secondary">تواصل معنا</Button>
-                <Button type="primary">اطلب خدمة</Button>
+                <Button type="secondary" to="/contact-us">
+                    تواصل معنا
+                </Button>
+                <Button type="primary" to="/">
+                    اطلب خدمة
+                </Button>
             </div>
         </nav>
     );
