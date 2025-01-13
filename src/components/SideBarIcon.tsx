@@ -18,7 +18,7 @@ export default function SideBarIcon() {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="size-6"
+                    className="w-12 h-12 cursor-pointer"
                 >
                     <path
                         strokeLinecap="round"
