@@ -42,7 +42,7 @@ export default function SideBarIcon() {
                                 onClick={toggleSidebar}
                                 className="text-lg font-medium text-gray-700 hover:text-primary"
                             >
-                                الرئيسيه
+                                الرئيسية
                             </Link>
                         </li>
                         <li>

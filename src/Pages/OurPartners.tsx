@@ -8,7 +8,7 @@ export default function OurPartners() {
     return (
         <>
             <Nav />
-            <div className="container flex flex-col justify-center mx-auto mt-20 md:flex-row md:gap-20">
+            <div className="container flex flex-col justify-center gap-5 mx-auto mt-20 md:flex-row md:gap-20">
                 <Card
                     image={partner1}
                     heading={"شركة تملك العمران"}
@@ -20,7 +20,7 @@ export default function OurPartners() {
                     image={partner2}
                     heading={"شركه مربع العقارية"}
                     body={
-                        "تقدم لك شركة مربع العقارية خدمة تصميم داخلي متكاملة حيث نساعدك في تحويل مساحتك إلى فضاء يعكس ذوقك و شخصيتك فريقنا من المصممين المحترفين يمتلك الخبرة و المعرفة اللازمتين لإبتكار تصاميم ..."
+                        "تقدم لك شركة مربع العقارية خدمة تصميم داخلي متكاملة حيث نساعدك في تحويل مساحتك إلى فضاء يعكس ذوقك و شخصيتك فريقنا من المصممين المحترفين يمتلك الخبرة و المعرفة اللازمتين لإبتكار تصاميم."
                     }
                 />
             </div>

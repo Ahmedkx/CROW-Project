@@ -1,10 +1,10 @@
-import HomeNav from "../components/HomeNav";
-import NavLinks from "../components/NavLinks";
+import Nav from "../components/Nav";
 
 export default function Home() {
     return (
         <>
-            <HomeNav />
+            {/* <HomeNav /> */}
+            <Nav />
             <div className="flex flex-col gap-24">
                 <div>
                     <h1 className="mt-12 text-5xl leading-relaxed text-center">
@@ -20,7 +20,7 @@ export default function Home() {
                         طموحاتك.
                     </h1>
                 </div>
-                <NavLinks />
+                {/* <NavLinks /> */}
             </div>
         </>
     );

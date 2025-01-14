@@ -13,7 +13,7 @@ export default function NavLinks({ style = "text-5xl" }) {
                                 : "text-black text-shadow"
                         }
                     >
-                        الرئيسيه
+                        الرئيسية
                     </NavLink>
                     <span className="absolute right-0 w-0 h-1 transition-all duration-300 -bottom-2 bg-primary group-hover:w-full"></span>
                 </li>

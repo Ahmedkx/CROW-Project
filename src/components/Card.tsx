@@ -15,11 +15,13 @@ const Card: React.FC<CardProps> = ({ image, heading, body, textStyle }) => {
                 <img
                     src={image}
                     alt={heading}
-                    className={`w-full rounded-[45px]`}
+                    className={`w-full h-[210px] rounded-[45px] bg-white`}
                 />
             </figure>
-            <p className={`text-xl text-primary ${textStyle}`}>{heading}</p>
-            {body ? <p className="text-sm w-80">{body}</p> : null}
+            <p className={`text-xl text-primary mt-3 ${textStyle}`}>
+                {heading}
+            </p>
+            {body ? <p className="mt-1 text-sm w-80">{body}</p> : null}
         </div>
     );
 };
