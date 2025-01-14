@@ -100,11 +100,9 @@ export default function ContactUs() {
                                 />
                             </svg>
 
-                            <span className="text-3xl text-[#68686F] grow text-center">
-                                <p className="text-2xl text-center">
-                                    اوقات العمل
-                                </p>
-                                <p className="text-2xl text-center">
+                            <span className="text-3xl text-[#68686F] grow text-center flex flex-col gap-2">
+                                <p className="text-2xl">اوقات العمل</p>
+                                <p className="text-xl font-bold text-gray-500 ">
                                     الاحد - الخميس 9:00 - 6:00
                                 </p>
                             </span>

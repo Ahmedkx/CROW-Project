@@ -3,7 +3,6 @@ import Nav from "../components/Nav";
 export default function Home() {
     return (
         <>
-            {/* <HomeNav /> */}
             <Nav />
             <div className="flex flex-col gap-24">
                 <div>
@@ -20,7 +19,6 @@ export default function Home() {
                         طموحاتك.
                     </h1>
                 </div>
-                {/* <NavLinks /> */}
             </div>
         </>
     );
