@@ -34,7 +34,7 @@ export default function ContactUs() {
                     </li>
                     <li className="inline-flex items-center gap-4 mt-10">
                         <a
-                            href="mailto:tassog@hotmal.com"
+                            href="mailto:pro@tmllak.com"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center w-full gap-4 transition-transform duration-300 hover:translate-y-[-5px]"
@@ -54,7 +54,7 @@ export default function ContactUs() {
                                 />
                             </svg>
                             <span className="text-3xl text-[#68686F] grow text-center">
-                                tassog@hotmal.com
+                                pro@tmllak.com
                             </span>
                         </a>
                     </li>
