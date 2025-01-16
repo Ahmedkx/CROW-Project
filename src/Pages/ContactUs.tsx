@@ -60,8 +60,8 @@ export default function ContactUs() {
                     </li>
                     <li className="inline-flex items-center gap-4 mt-10">
                         <a
-                            href="#"
-                            // target="_blank"
+                            href="https://www.tiktok.com/@crow2t"
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center w-full gap-4 transition-transform duration-300 hover:translate-y-[-5px]"
                         >
@@ -91,8 +91,8 @@ export default function ContactUs() {
                     </li>
                     <li className="inline-flex items-center gap-4 mt-10">
                         <a
-                            href="#"
-                            // target="_blank"
+                            href="https://www.instagram.com/crow2t"
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center w-full gap-4 transition-transform duration-300 hover:translate-y-[-5px]"
                         >

@@ -5,12 +5,6 @@ import { services } from "../data/servicesData";
 import { NavLink } from "react-router";
 
 export default function OurServices() {
-    // const getRoute = (id: string) => {
-    //     if (id === "fashion") return "/photography-request";
-    //     if (id === "coverage") return "/event-request";
-    //     return "/send-request";
-    // };
-
     return (
         <>
             <Nav />

@@ -1,14 +1,31 @@
 import { Pagination, Table, Button, Container, TextInput } from "@mantine/core";
 import { useEffect, useState } from "react";
 import supabase from "../../Supabase";
+import { Session } from "@supabase/supabase-js";
 
 export default function TableSort() {
+    const [session, setSession] = useState<Session | null>(null);
+    useEffect(() => {
+        supabase.auth.getSession().then(({ data: { session } }) => {
+            setSession(session);
+        });
+
+        const {
+            data: { subscription },
+        } = supabase.auth.onAuthStateChange((_event, session) => {
+            setSession(session);
+        });
+
+        return () => subscription.unsubscribe();
+    }, []);
+
     const [activePage, setPage] = useState(1);
     interface ServiceRequest {
         id: number;
         name: string;
         full_name: string;
         created_at: string;
+        status: string;
     }
 
     const [elements, setElements] = useState<ServiceRequest[]>([]);
@@ -29,9 +46,10 @@ export default function TableSort() {
 
     const rows = elements.map((element) => (
         <Table.Tr key={element.id} ta={"center"}>
-            <Table.Td>{element.name}</Table.Td>
+            <Table.Td>{element.id}</Table.Td>
             <Table.Td>{element.full_name}</Table.Td>
             <Table.Td>{element.created_at}</Table.Td>
+            <Table.Td>{element.status}</Table.Td>
             <Table.Td ta={"center"}>
                 <Button>عرض</Button>
             </Table.Td>
