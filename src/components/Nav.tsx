@@ -26,7 +26,7 @@ export default function Nav() {
                 <Button type="secondary" to="/contact-us">
                     تواصل معنا
                 </Button>
-                <Button type="primary" to="/our-services">
+                <Button type="primary" to="/send-request">
                     اطلب خدمة
                 </Button>
             </div>

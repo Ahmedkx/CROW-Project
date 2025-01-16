@@ -1,12 +1,38 @@
+import { Container, Image } from "@mantine/core";
+import { Carousel } from "@mantine/carousel";
 import Nav from "../components/Nav";
 
 export default function Home() {
+    const images = [
+        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-1.png",
+        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-2.png",
+        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-3.png",
+        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-4.png",
+        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-5.png",
+    ];
+
+    const slides = images.map((url) => (
+        <Carousel.Slide key={url}>
+            <Image src={url} />
+        </Carousel.Slide>
+    ));
+
     return (
         <>
             <Nav />
             <div className="flex flex-col gap-24">
                 <div>
-                    <h1 className="mt-12 text-5xl leading-relaxed text-center">
+                    <h1 className="mt-12 text-3xl leading-relaxed text-center">
+                        <Container mb={30} size={"xl"}>
+                            <Carousel
+                                dir="ltr"
+                                withIndicators
+                                controlSize={40}
+                                loop
+                            >
+                                {slides}
+                            </Carousel>
+                        </Container>
                         <p>
                             نجمع بين{" "}
                             <span className="text-primary">الإبداع</span>{" "}

@@ -15,7 +15,7 @@ const Card: React.FC<CardProps> = ({ image, heading, body, textStyle }) => {
                 <img
                     src={image}
                     alt={heading}
-                    className={`w-full h-[210px] rounded-[45px] bg-white`}
+                    className={`w-full h-[210px] rounded-[45px] `}
                 />
             </figure>
             <p className={`text-xl text-primary mt-3 ${textStyle}`}>

@@ -60,8 +60,8 @@ export default function ContactUs() {
                     </li>
                     <li className="inline-flex items-center gap-4 mt-10">
                         <a
-                            href="https://x.com/o_tmllak"
-                            target="_blank"
+                            href="#"
+                            // target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center w-full gap-4 transition-transform duration-300 hover:translate-y-[-5px]"
                         >
@@ -69,14 +69,56 @@ export default function ContactUs() {
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
                                 height="24"
-                                fill="black"
-                                viewBox="0 0 300 300.251"
-                                version="1.1"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                // className="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok"
                             >
-                                <path d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59h89.34M36.01 19.54H76.66l187.13 262.13h-40.66" />
+                                <path
+                                    stroke="none"
+                                    d="M0 0h24v24H0z"
+                                    fill="none"
+                                />
+                                <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" />
                             </svg>
                             <span className="text-3xl text-[#68686F] grow text-center">
-                                o_tmllak@twitter.com
+                                Crow2t
+                            </span>
+                        </a>
+                    </li>
+                    <li className="inline-flex items-center gap-4 mt-10">
+                        <a
+                            href="#"
+                            // target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center w-full gap-4 transition-transform duration-300 hover:translate-y-[-5px]"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                // class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"
+                            >
+                                <path
+                                    stroke="none"
+                                    d="M0 0h24v24H0z"
+                                    fill="none"
+                                />
+                                <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                                <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                                <path d="M16.5 7.5v.01" />
+                            </svg>
+                            <span className="text-3xl text-[#68686F] grow text-center">
+                                Crow2t
                             </span>
                         </a>
                     </li>
