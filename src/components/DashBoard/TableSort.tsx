@@ -4,7 +4,7 @@ import supabase from "../../Supabase";
 import { Session } from "@supabase/supabase-js";
 
 export default function TableSort() {
-    const [session, setSession] = useState<Session | null>(null);
+    const [, setSession] = useState<Session | null>(null);
     useEffect(() => {
         supabase.auth.getSession().then(({ data: { session } }) => {
             setSession(session);
