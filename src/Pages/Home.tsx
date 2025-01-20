@@ -1,8 +1,12 @@
 import { Container, Image } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import Nav from "../components/Nav";
+import { useRef } from "react";
 
 export default function Home() {
+    const autoplay = useRef(Autoplay({ delay: 2000 }));
+
     const images = [
         "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-1.png",
         "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-2.png",
@@ -29,6 +33,9 @@ export default function Home() {
                                 withIndicators
                                 controlSize={40}
                                 loop
+                                plugins={[autoplay.current]}
+                                onMouseEnter={autoplay.current.stop}
+                                onMouseLeave={autoplay.current.reset}
                             >
                                 {slides}
                             </Carousel>

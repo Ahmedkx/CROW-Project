@@ -1,9 +1,18 @@
-import { TextInput, Group, Textarea, Button, NumberInput } from "@mantine/core";
+import {
+    TextInput,
+    Group,
+    Textarea,
+    Button,
+    NumberInput,
+    ActionIcon,
+} from "@mantine/core";
 import { isNotEmpty, useForm } from "@mantine/form";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import supabase from "../../Supabase";
 import { DateInput, TimeInput } from "@mantine/dates";
+import { IconArrowLeft } from "@tabler/icons-react";
+// import { IconClock } from "@tabler/icons-react";
 
 export default function PhotographyRequest({
     serviceType,
@@ -12,6 +21,20 @@ export default function PhotographyRequest({
 }) {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
+    const ref = useRef<HTMLInputElement>(null);
+
+    const pickerControl = (
+        <ActionIcon
+            variant="subtle"
+            color="gray"
+            onClick={() => ref.current?.showPicker()}
+        >
+            {/* <IconClock size={16} stroke={1.5} />
+             */}
+            <div>Clock</div>
+            <IconArrowLeft />
+        </ActionIcon>
+    );
 
     const form = useForm({
         initialValues: {
@@ -128,6 +151,8 @@ export default function PhotographyRequest({
                 key={form.key("time")}
                 {...form.getInputProps("time")}
                 className="w-full"
+                ref={ref}
+                rightSection={pickerControl}
             />
 
             <TextInput

@@ -4,6 +4,7 @@ import supabase from "../../Supabase";
 import { Session } from "@supabase/supabase-js";
 
 export default function TableSort() {
+    const [search, setSearch] = useState("");
     const [, setSession] = useState<Session | null>(null);
     useEffect(() => {
         supabase.auth.getSession().then(({ data: { session } }) => {
@@ -35,6 +36,7 @@ export default function TableSort() {
             .from("service_requests")
             .select()
             .range(0, 1);
+        // .textSearch("full_name", "t");
 
         setElements(data ?? []);
         console.log(data);
@@ -56,9 +58,16 @@ export default function TableSort() {
         </Table.Tr>
     ));
 
+    console.log(search);
+
     return (
         <Container>
-            <TextInput flex={1} mt={30} placeholder="ابحث عن طلب" />
+            <TextInput
+                flex={1}
+                mt={30}
+                placeholder="ابحث عن طلب"
+                onChange={(e) => setSearch(e)}
+            />
             <Table
                 striped
                 highlightOnHover

@@ -20,7 +20,7 @@ export default function Login() {
 
     const form = useForm({
         initialValues: {
-            email: "midots202@gmail.com",
+            email: "test@mail.com",
             password: "test",
         },
 
